@@ -1,17 +1,32 @@
 import re
 import scrapy
+import os
+import json
+
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
 
 class SpiderClubs(scrapy.Spider):
     name = "Clubtfmkt"
     allowed_domains = ["www.transfermarkt.com"]
-    start_urls = ["https://www.transfermarkt.com/ligue-1/startseite/wettbewerb/FR1", 
-                  "https://www.transfermarkt.com/premier-league/startseite/wettbewerb/GB1"] #.com and not .fr (choice)
+    start_urls = ["https://www.transfermarkt.com/ligue-1/startseite/wettbewerb/FR1"] # Original ones .com and not .fr (choice)
 
-    def __init__(self, club_name=None, user_agent=USER_AGENT, *args, **kwargs):
+    def __init__(self, json_path=str(None), club_name=None, user_agent=USER_AGENT, *args, **kwargs):
         super(SpiderClubs, self).__init__(*args, **kwargs)
         self.club_name = club_name
         self.user_agent = user_agent
+        self.website_href = "https://www.transfermarkt.com"
+        print(os.path.exists(json_path))
+        if os.path.exists(json_path) :
+            self.start_urls = self.load_competitions_urls(json_path)
+
+    
+    def load_competitions_urls(self, json_path) :
+        competitions_urls = []
+        with open(json_path, "r") as file :
+            competitions = json.load(file)
+        for competition in competitions : 
+            competitions_urls.append(competition['competition_url'])
+        return competitions_urls
 
     def start_requests(self):
         print("Starting requests...")
@@ -40,7 +55,7 @@ class SpiderClubs(scrapy.Spider):
                 yield {
                     "league" : league,
                     "name" : name,
-                    "href" : href,
+                    "href" : self.website_href.rstrip('/') + href,
                     "value" : value
                 }
 
