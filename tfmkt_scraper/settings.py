@@ -13,6 +13,9 @@ LOG_LEVEL= "ERROR"
 SPIDER_MODULES = ["tfmkt_scraper.spiders"]
 NEWSPIDER_MODULE = "tfmkt_scraper.spiders"
 
+LOG_FILE = 'scrapy_log.txt'
+
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "tfmkt_scraper (+http://www.yourdomain.com)"
