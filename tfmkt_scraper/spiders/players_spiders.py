@@ -51,13 +51,12 @@ class SpiderPlayers(scrapy.Spider):
             name= player.xpath('./td[2]//a/text()').get().replace("\n","").replace("  ","")
             age= player.xpath('./td[3]/text()').get()
             position=  player.xpath('./td[2]/table[@class="inline-table"]//tr[2]/td/text()').get().replace("\n","").replace("  ","")
+            country = player.xpath('.//img[@class="flaggenrahmen"]/@title').get()
             number= player.xpath('.//div[@class="rn_nummer"]/text()').get()
             value= player.xpath('./td[@class="rechts hauptlink"]/a/text()').get()
             href= player.xpath('./td[2]//a/@href').get()
-            country = player.xpath('.//img[@class="flaggenrahmen"]/@title').get()
             
             yield {
-                "name" : name, "age" : age, "position" : position,
-                "number" : number, "value" : value, "href": href, 
-                "country" : country
+                "name" : name, "age" : age, "position" : position, "country" : country,
+                "number" : number, "value" : value, "href": href
             }
