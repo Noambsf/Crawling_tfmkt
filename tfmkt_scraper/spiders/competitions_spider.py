@@ -5,7 +5,7 @@ from scrapy.exceptions import CloseSpider
 class CompetitionSpider(scrapy.Spider):
     name = "CompetitionSpider"
     allowed_domains = ["transfermarkt.com"]
-    start_urls = ["https://www.transfermarkt.com/wettbewerbe/europa"]
+    start_urls = ["https://www.transfermarkt.com/wettbewerbe/europa?page=2","https://www.transfermarkt.com/wettbewerbe/europa"]
 
     custom_settings = {
         'USER_AGENT': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " \
@@ -15,7 +15,7 @@ class CompetitionSpider(scrapy.Spider):
         'LOG_LEVEL': 'INFO',  # Change to 'DEBUG' for more verbosity
     }
 
-    def __init__(self, num_leagues=20, *args, **kwargs):
+    def __init__(self, num_leagues=80, *args, **kwargs):
         super(CompetitionSpider, self).__init__(*args, **kwargs)
         try:
             self.num_leagues = int(num_leagues)
@@ -23,7 +23,7 @@ class CompetitionSpider(scrapy.Spider):
                 raise ValueError
         except ValueError:
             self.logger.error("Invalid value for num_leagues: '%s'. Using default of 20.", num_leagues)
-            self.num_leagues = 20
+            self.num_leagues = 80
         self.leagues_yielded = 0
 
         # Comprehensive mapping of country codes to country names
@@ -53,6 +53,31 @@ class CompetitionSpider(scrapy.Spider):
             'RO1': 'Romania',
             'BU1': 'Bulgaria',
             'UNG1': 'Hungary',
+            'ZYP1': 'Cyprus',
+            'ISR1': 'Israel',
+            'SLO1': 'Slovakia',
+            'AZ1': 'Azerbaijan',
+            'KAS1': 'Kazakhstan',
+            'BOS1': 'Bosnia-Herzegovina',
+            'SL1': 'Slovenia',
+            'WER1': 'Belarus',
+            'LI1': 'Lithuania',
+            'LET1': 'Latvia',
+            'FI1': 'Finland',
+            'ARM1': 'Armenia',
+            'ALB1': 'Albania',
+            'MAZ1': 'North Macedonia',
+            'MT1N': 'Malta',
+            'GE1N': 'Georgia',
+            'KO1': 'Kosovo',  
+            'IR1': 'Ireland',
+            'IS1': 'Iceland',
+            'MO1N': 'Moldova',
+            'EST1': 'Estonia',
+            'LUX1': 'Luxembourg',
+            'NIR1': 'Northern Ireland',
+            'MNE1': 'Montenegro',
+            'AND1': 'Andorra',
             # Add more mappings as needed
         }
 
@@ -139,11 +164,14 @@ class CompetitionSpider(scrapy.Spider):
         Derive the country name from the competition URL using the country_code_map.
         """
         if competition_url:
-            match = re.search(r'/wettbewerb/([A-Z]{2,3}\d?)$', competition_url)
+            # It will be after the last '/' in the URL
+            match = re.search(r'/([A-Z0-9]+)$', competition_url)
             if match:
                 country_code = match.group(1)
+                cc = country_code
                 country_name = self.country_code_map.get(country_code, 'Unknown')
                 if country_name == 'Unknown':
+                    print(cc)
                     self.logger.warning("Country code '%s' not found in mapping for competition '%s'.", country_code, competition_name)
                 return country_name
             else:
