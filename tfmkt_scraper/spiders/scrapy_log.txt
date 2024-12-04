@@ -1,0 +1,248 @@
+2024-12-04 20:32:53 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:33:57 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:35:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:36:13 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:38:55 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/real-madrid/startseite/verein/418/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:44:51 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:49:01 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable
+2024-12-04 20:49:19 [scrapy.core.scraper] ERROR: Spider error processing <GET https://www.transfermarkt.com/olympique-marseille/kader/verein/244/saison_id/2024> (referer: None)
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\defer.py", line 327, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\utils\python.py", line 368, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 379, in <genexpr>
+    return (self._set_referer(r, response) for r in result)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 57, in <genexpr>
+    return (r for r in result if self._filter(r, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 54, in <genexpr>
+    return (r for r in result if self._filter(r, response, spider))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    yield from iterable
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 43, in parse_club
+    yield from self.parse_players(response)
+TypeError: 'NoneType' object is not iterable

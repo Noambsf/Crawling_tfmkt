@@ -49,6 +49,7 @@ class SpiderPlayers(scrapy.Spider):
             """Parcourir les td et recuperer les info dans l'ordre"""
             
             name= player.xpath('./td[2]//a/text()').get().replace("\n","").replace("  ","")
+            team = player.xpath('//header[@class="data-header"]/div/h1/text()').get().replace("\n","").replace("  ","")
             age= player.xpath('./td[3]/text()').get()
             position=  player.xpath('./td[2]/table[@class="inline-table"]//tr[2]/td/text()').get().replace("\n","").replace("  ","")
             country = player.xpath('.//img[@class="flaggenrahmen"]/@title').get()
@@ -57,6 +58,7 @@ class SpiderPlayers(scrapy.Spider):
             href= player.xpath('./td[2]//a/@href').get()
             
             yield {
-                "name" : name, "age" : age, "position" : position, "country" : country,
+                "name" : name, "team" : team, "age" : age, "position" : position, "country" : country,
                 "number" : number, "value" : value, "href": href
             }
+            
