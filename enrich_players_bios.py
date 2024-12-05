@@ -24,7 +24,7 @@ input_file = "tfmkt_scraper/crawled_data/players.json"
 output_file = "tfmkt_scraper/crawled_data/players_with_bios.json"
 
 try:
-    with open(input_file, "r") as file:
+    with open(input_file, "r", encoding='utf-8') as file:
         players = json.load(file)
 except FileNotFoundError:
     print(f"Error: File {input_file} not found.")
@@ -34,7 +34,7 @@ except FileNotFoundError:
 session = requests.Session()
 
 # Open output file in write mode
-with open(output_file, "w") as output_file:
+with open(output_file, "w", encoding='utf-8') as output_file:
     output_file.write("[\n")  # Start JSON array
     for i, player in enumerate(players):
         print(f"Fetching bio for {player['name']}...")

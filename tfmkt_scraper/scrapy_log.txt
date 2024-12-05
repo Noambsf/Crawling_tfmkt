@@ -1,0 +1,28 @@
+2024-12-04 20:51:43 [twisted] CRITICAL: Unhandled error in Deferred:
+2024-12-04 20:51:43 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\twisted\internet\defer.py", line 2017, in _inlineCallbacks
+    result = context.run(gen.send, result)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\crawler.py", line 149, in crawl
+    self.spider = self._create_spider(*args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\crawler.py", line 163, in _create_spider
+    return self.spidercls.from_crawler(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\crawler\Lib\site-packages\scrapy\spiders\__init__.py", line 66, in from_crawler
+    spider = cls(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 22, in __init__
+    self.start_urls = self.load_clubs_urls(json_path)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\OneDrive\Bureau\M2_IASD\Semestre_1\Data_acquisition\Crawling_tfmkt\tfmkt_scraper\spiders\players_spiders.py", line 27, in load_clubs_urls
+    clubs = json.load(file)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\riri_\AppData\Local\Programs\Python\Python311\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+                 ^^^^^^^^^
+  File "C:\Users\riri_\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 23147: character maps to <undefined>

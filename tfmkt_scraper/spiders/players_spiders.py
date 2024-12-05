@@ -17,13 +17,12 @@ class SpiderPlayers(scrapy.Spider):
         super(SpiderPlayers, self).__init__(*args, **kwargs)
         self.user_agent = user_agent
         self.person = club
-        # self.user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
         if os.path.exists(json_path) :
             self.start_urls = self.load_clubs_urls(json_path)
             
     def load_clubs_urls(self, json_path) :
         club_urls = []
-        with open(json_path, "r") as file :
+        with open(json_path, "r", encoding='utf-8') as file :
             clubs = json.load(file)
         for club in clubs : 
             club_urls.append(club['href'])
@@ -61,4 +60,3 @@ class SpiderPlayers(scrapy.Spider):
                 "name" : name, "team" : team, "age" : age, "position" : position, "country" : country,
                 "number" : number, "value" : value, "href": href
             }
-            
