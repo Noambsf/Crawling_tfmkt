@@ -116,7 +116,7 @@ CREATE TABLE IF NOT EXISTS players (
     value REAL,
     href TEXT,
     bio TEXT,
-    PRIMARY KEY (name, age, href),
+    PRIMARY KEY (name, team, age),
     FOREIGN KEY (team) REFERENCES clubs (name)
 );
 """)

@@ -54,9 +54,11 @@ class SpiderPlayers(scrapy.Spider):
             country = player.xpath('.//img[@class="flaggenrahmen"]/@title').get()
             number= player.xpath('.//div[@class="rn_nummer"]/text()').get()
             value= player.xpath('./td[@class="rechts hauptlink"]/a/text()').get()
-            href= player.xpath('./td[2]//a/@href').get()
+            href= player.xpath('.//td[@class="hauptlink"]/a/@href').get()
             
             yield {
                 "name" : name, "team" : team, "age" : age, "position" : position, "country" : country,
                 "number" : number, "value" : value, "href": href
             }
+
+            
