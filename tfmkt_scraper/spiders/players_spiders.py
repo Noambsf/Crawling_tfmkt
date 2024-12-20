@@ -44,7 +44,7 @@ class SpiderPlayers(scrapy.Spider):
             self.logger.error(f"Failed to retrieve {response.url} with status {response.status}")
     
     def parse_players(self, response):
-        for player in response.xpath("//div[@class='responsive-table']//table[@class='items']/tbody/tr"): # response.xpath('//table[@class="inline-table"]//a'):
+        for player in response.xpath("//div[@class='responsive-table']//table[@class='items']/tbody/tr"):
             """Parcourir les td et recuperer les info dans l'ordre"""
             
             name= player.xpath('./td[2]//a/text()').get().replace("\n","").replace("  ","")

@@ -44,7 +44,7 @@ for player_name, team in players:
 # Fermer la connexion
 conn.close()
 
-# Définir les couleurs et tailles des nœuds
+# Initialiser les couleurs et tailles des nœuds
 node_sizes = []
 node_colors = []
 node_labels = {}
@@ -62,26 +62,25 @@ for node, data in G.nodes(data=True):
             node_colors.append('pink')  # Couleur des nœuds des compétitions
             node_labels[node] = node  # Afficher les noms des compétitions
         elif data['type'] == 'club':
-            node_sizes.append(5000)  # Taille des nœuds des clubs
-            node_colors.append('lightblue')  # Couleur des nœuds des clubs
-            node_labels[node] = node  # Afficher les noms des clubs
-        else:  # Pour les joueurs
-            node_sizes.append(100)  # Taille des nœuds des joueurs
+            node_sizes.append(5000)   
+            node_colors.append('lightblue') 
+            node_labels[node] = node  
+        else: # Attribuer les couleurs par equipes
+            node_sizes.append(100)  
             team_name = [t for n,t in players if n == node]
             node_colors.append(team_colors[team_name[0]]) 
             node_labels[node] = ''  # Ne pas afficher les noms des joueurs
     else:
         data['type'] = 'club'
-        node_sizes.append(500)  # Taille des nœuds des clubs
-        node_colors.append('lightblue')  # Couleur des nœuds des clubs
-        node_labels[node] = node  # Afficher les noms des clubs
+        node_sizes.append(500)   
+        node_colors.append('lightblue')   
+        node_labels[node] = node  
 
-pos = nx.spring_layout(G, k=0.2, iterations=50)  # Paramètre k pour la "force" de répulsion
+# Gere la disposition du graph
+pos = nx.spring_layout(G, k=0.2, iterations=50)
 
-# Dessiner le graphe
 plt.figure(figsize=(12, 8))
 
-# Dessiner le graphe avec les paramètres définis
 nx.draw(
     G, pos, with_labels=True, node_size=node_sizes,
     node_color=node_colors, font_size=10, font_weight="bold", labels=node_labels
