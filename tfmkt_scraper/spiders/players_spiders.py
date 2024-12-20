@@ -44,9 +44,9 @@ class SpiderPlayers(scrapy.Spider):
             self.logger.error(f"Failed to retrieve {response.url} with status {response.status}")
     
     def parse_players(self, response):
+        # Parcours chaque lignes (i.e. joueur) de la table
         for player in response.xpath("//div[@class='responsive-table']//table[@class='items']/tbody/tr"):
-            """Parcourir les td et recuperer les info dans l'ordre"""
-            
+            # Recupère les attributs propres a chaque joueurs (+ normalisation quand requis)
             name= player.xpath('./td[2]//a/text()').get().replace("\n","").replace("  ","")
             team = player.xpath('//header[@class="data-header"]/div/h1/text()').get().replace("\n","").replace("  ","")
             age= player.xpath('./td[3]/text()').get()
@@ -55,7 +55,7 @@ class SpiderPlayers(scrapy.Spider):
             number= player.xpath('.//div[@class="rn_nummer"]/text()').get()
             value= player.xpath('./td[@class="rechts hauptlink"]/a/text()').get()
             href= player.xpath('.//td[@class="hauptlink"]/a/@href').get()
-            
+
             yield {
                 "name" : name, "team" : team, "age" : age, "position" : position, "country" : country,
                 "number" : number, "value" : value, "href": href
