@@ -2,7 +2,13 @@
 
 You'll find in this repository all our codes and results for the Data Acquisition project.
 
-- To run crawling of TransferMrkt, run the script "run_crawl.sh". This will run the crawling for competitions, then clubs using competitions output. And then players using clubs output. The spiders can be found in the folder "tfmkt_scraper/spiders". The output crawled data is available in the folder "/crawled_data".
+- To run crawling of TransferMrkt, run the script "run_crawl.sh" :
+
+````bash
+./run_crawl.sh
+````
+This will run the crawling for competitions, then clubs using competitions output. And then players using clubs output. The spiders can be found in the folder "tfmkt_scraper/spiders". The output crawled data is available in the folder "/crawled_data".
+
 - To run the Wikipedia API :
 
 - Postprocessing codes can be found in the notebook "postprocessing.ipynb" at the root of the repo.
@@ -13,6 +19,8 @@ You'll find in this repository all our codes and results for the Data Acquisitio
 Students :
 
 Noâm BOUSSOUF
+
 Efstathios CHATZILOIZOS
+
 Emmarius DELAR
 
